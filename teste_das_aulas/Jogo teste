@@ -1,0 +1,19 @@
+# Jogo randômico teste
+
+import random   
+
+contador = 0
+pontos_jogador_1 = 0
+pontos_jogador_2 = 0
+while contador < 11:
+    jogador_1 = random.randint(0,10)
+    jogador_2 = random.randint(0,10)
+    if (jogador_1+jogador_2)%2==0:
+        pontos_jogador_1 += 1
+    else:
+        pontos_jogador_2 += 1
+    contador += 1
+if pontos_jogador_1 > pontos_jogador_2:
+    print(f'O jogador número 1 venceu')
+else:   
+    print(f'O jogador número 2 venceu')
